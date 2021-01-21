@@ -5,38 +5,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "c++ Launch",
+            "name": "g++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/builds/windows/main",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
             "args": [],
-            "preLaunchTask": "Build",
             "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": true,
+            "externalConsole": false,
             "MIMode": "gdb",
-            "linux": {
-                "program": "${workspaceRoot}/builds/linux/main",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-printing",
-                        "ignoreFailures": true
-                    }
-                ],
-            },
-            "windows": {
-                "program": "${workspaceRoot}/builds/windows/main",
-                "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe"
-            },
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
                     "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
-            ]
+            ],
+            "preLaunchTask": "C/C++: g++ build active file",
+            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }
