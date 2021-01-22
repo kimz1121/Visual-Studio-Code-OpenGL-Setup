@@ -26,12 +26,12 @@ int main()
         glfwTerminate();
         return -1;
     }
-    // ���� �����쿡 context�� ����
+    // // ���� �����쿡 context�� ����
     glfwMakeContextCurrent(window);
-    // buffer�� ũ�Ⱑ ����� �� ȣ��Ǵ� �ݹ�
+    // // buffer�� ũ�Ⱑ ����� �� ȣ��Ǵ� �ݹ�
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // glad �ε�
+    // // glad �ε�
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         // std::cout << "Failed to initialize GLAD" << std::endl;
